@@ -60,12 +60,12 @@ export function CreateDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-[#191919] text-zinc-200 border-zinc-800 py-2 px-4 rounded-xl border-2 font-medium shadow-sm whitespace-nowrap">
+        <Button className="bg-[#191919] text-white border-zinc-800 py-2 px-4 rounded-xl border-2 font-medium shadow-sm whitespace-nowrap">
           <PlusIcon className="w-4 h-4 mr-2" />
           Create Flashcard
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] text-black dark:text-white">
         <DialogHeader>
           <DialogTitle>Create Flashcard</DialogTitle>
           <DialogDescription>

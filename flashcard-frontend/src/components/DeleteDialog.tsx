@@ -54,7 +54,7 @@ export function DeleteDialog({ id }: DeleteDialogProps) {
                     <TrashIcon className="w-4 h-4" />
                 </Button>
             </AlertDialogTrigger>
-            <AlertDialogContent>
+            <AlertDialogContent className="text-black dark:text-white">
                 <AlertDialogHeader>
                     <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
                     <AlertDialogDescription>

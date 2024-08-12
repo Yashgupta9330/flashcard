@@ -61,7 +61,7 @@ export function EditDialog({ flashcard }: EditDialogProps) {
           <FilePenIcon className="w-4 h-4" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] text-black dark:text-white">
         <DialogHeader>
           <DialogTitle>Edit Flashcard</DialogTitle>
           <DialogDescription>
