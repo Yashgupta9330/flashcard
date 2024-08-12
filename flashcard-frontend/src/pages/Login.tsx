@@ -51,7 +51,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center text-white bg-[#191919]">
+    <div className="flex min-h-screen items-center justify-center text-white bg-[#191919]">
       <Card className="w-full max-w-md border border-black">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Login</CardTitle>
@@ -94,6 +94,11 @@ export default function Login() {
             {loading ? 'Signing in...' : 'Sign in'}
           </Button>
           {error && <p className="text-red-500">{error}</p>}
+          {/* Test credentials in the bottom left corner */}
+          <div className="text-left text-sm text-gray-500 mt-2">
+            Test User: johndoe@example.com<br />
+            Test Password: password123
+          </div>
         </CardFooter>
       </Card>
     </div>

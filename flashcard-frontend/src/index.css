@@ -59,14 +59,7 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
+
 
 
 .flashcard-container {
@@ -111,5 +104,41 @@
   }
 
 
+
+  
+  *{
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  .card {
+    transform-style: preserve-3d;
+    transition: 150ms;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+  }
+  
+  .card:hover .dark{
+    
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+  }
+  .card:hover {
+    --translate-y: -2px;
+  }
+  
+  .card.flip {
+    --rotate-y: 180deg;
+  }
+  
+  .card .front {
+    left: 0;
+  }
+  
+  .card .front,
+  .card .back {
+    backface-visibility: hidden;
+  }
+  
+  .card .back {
+    transform: rotateY(180deg);
+  }
 
   
