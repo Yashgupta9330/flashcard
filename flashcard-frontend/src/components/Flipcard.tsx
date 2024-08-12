@@ -39,7 +39,7 @@ const FlipCard:React.FC<FlipCardProps> = ({data}) => {
 			<div className="back absolute p-5 text-center text-lg " >
 			<div className="text-left flex flex-col justify-around items-start gap-5 w-full ">
 					<h3 className="text-xl font-bold">Explaination</h3>
-					<Separator />
+					<Separator className='bg-white'/>
 					<p className=" w-full ">
 					{data.answer}
 					</p>
