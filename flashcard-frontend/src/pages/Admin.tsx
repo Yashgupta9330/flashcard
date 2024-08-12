@@ -7,6 +7,7 @@ import { DeleteDialog } from "../components/DeleteDialog";
 import Sidebar from "../components/Sidebar";
 import { Spinner } from "../components/spinner";
 import { Header } from "@/components/Header";
+import { BASE_URL } from "../utils/url";
 
 
 interface Flashcard {
