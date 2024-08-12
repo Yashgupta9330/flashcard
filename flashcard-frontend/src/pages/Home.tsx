@@ -20,7 +20,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-[#191919]" >
+    <div className="w-full min-h-screen bg-white dark:bg-[#191919]" >
         <Navbar/>
         <div className="flex items-center justify-center h-full">
             <FlashcardDisplay flashcards={flashcards} />

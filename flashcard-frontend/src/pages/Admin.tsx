@@ -40,7 +40,7 @@ export default function CardAdmin() {
       <Navbar />
       <div className="flex">
       <Sidebar />
-        <div className="flex-1 bg-[#191919] p-8 overflow-y-auto min-h-screen">
+        <div className="flex-1 bg-white dark:bg-[#191919] p-8 overflow-y-auto min-h-screen">
           <div className="mx-auto">
             <div className="grid gap-8">
               <Header/>
@@ -54,16 +54,16 @@ export default function CardAdmin() {
                     {flashcards.length>0 && flashcards.map(flashcard => (
                  <Card
                  key={flashcard.id}
-                 className="flex flex-col items-center justify-center text-[#F3F3F3EA] cursor-pointer mb-4 bg-[#ffffff0d] border border-[#3D3D3D] backdrop-blur-lg rounded-[20px] p-4 shadow-[0px_0px_2px_0px_#00000040] group hover:border-[#FCEDEF] transition-all duration-300 ease-in-out"
+                 className="flex flex-col items-center justify-center cursor-pointer mb-4 bg-[#ffffff0d] border border-[#3D3D3D] backdrop-blur-lg rounded-[20px] p-4 shadow-[0px_0px_2px_0px_#00000040] group hover:border-[#FCEDEF] transition-all duration-300 ease-in-out"
                >
                  <CardContent className="flex flex-col items-center gap-4 w-full">
-                   <span className="font-bold text-center text-[16px] md:text-[20px] break-words w-full">
+                   <span className="font-bold text-center text-[16px] md:text-[20px] break-words w-full text-black dark:text-[#F3F3F3EA] ">
                      {flashcard.question}
                    </span>
-                   <p className="font-bold text-center text-[16px] md:text-[20px] break-words w-full">
+                   <p className="font-bold text-center text-[16px] md:text-[20px] break-words w-full text-black dark:text-[#F3F3F3EA]">
                      {flashcard.answer}
                    </p>
-                   <div className="flex justify-center gap-2 sm:gap-4 items-center mt-4 w-full">
+                   <div className="flex justify-center gap-2 sm:gap-4 items-center mt-4 w-full text-white">
                      <EditDialog flashcard={flashcard} />
                      <DeleteDialog id={flashcard.id} />
                    </div>

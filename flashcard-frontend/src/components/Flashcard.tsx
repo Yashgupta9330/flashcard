@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Nexticon from './icons/Nexticon';
 import Previousicon from './icons/Previcons';
 import FlipCard from './Flipcard';
+import { Spinner } from './spinner';
 interface Flashcard {
     id: number;
     question: string;
@@ -27,7 +28,7 @@ const FlashcardDisplay: React.FC<FlashcardDisplayProps> = ({ flashcards }) => {
     };
 
     if (flashcards.length === 0) {
-        return <div className='text-[#FCEDEF] font-semibold text-[16px]'>No flashcards available.</div>;
+        return <Spinner/>;
     }
 
     

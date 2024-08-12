@@ -4,25 +4,36 @@ import { useEffect, useState } from "react";
 
 export function ModeToggle() {
   const [themeToggle, setThemeToggle] = useState<boolean>(() => {
-    return localStorage.getItem("theme") === "light";
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme === "light"; 
   });
 
-  useEffect(() => {
+  useEffect(() => { 
+    document.documentElement.classList.remove("light", "dark");
     if (themeToggle) {
-        document.body.setAttribute("data-theme", "light");
-        localStorage.setItem("theme", "light");
-      } else {
-        document.body.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      }
+      document.documentElement.classList.add("light");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
   }, [themeToggle]);
+
+  useEffect(() => {
+      document.documentElement.classList.add("dark");
+  }, []);
 
   const handleThemeToggle = () => {
     setThemeToggle(prev => !prev);
   };
 
   return (
-    <Button variant="ghost" size="icon" onClick={handleThemeToggle}>
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={handleThemeToggle}
+      aria-label="Toggle theme"
+    >
       <SunIcon
         className={`h-[1.2rem] w-[1.2rem] transition-all ease-linear ${themeToggle ? 'opacity-100' : 'opacity-0'}`}
       />
