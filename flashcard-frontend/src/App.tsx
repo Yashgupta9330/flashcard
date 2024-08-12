@@ -4,7 +4,7 @@ import './App.css'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import CardAdmin from './pages/Admin'
-import PrivateRoute from './components/auth/privateroute'
+import PrivateRoute from './components/privateroute'
 function App() {
  
   return (
