@@ -17,6 +17,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { useState } from "react";
 import { FlashCardschema } from "@/utils/FlashcardSchema";
+import { BASE_URL } from "@/utils/url";
 
 
 type FormData = z.infer<typeof FlashCardschema>;
@@ -41,7 +42,7 @@ export function CreateDialog() {
   const onSubmit = async (data: FormData) => {
     setIsLoading(true); 
     try {
-      const response = await axios.post('http://localhost:4000/api/flashcards/create', data,{
+      const response = await axios.post(`${BASE_URL}/api/flashcards/create`, data,{
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
           }

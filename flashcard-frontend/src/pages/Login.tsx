@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from 'react-router-dom';
 import { loginSchema } from '@/utils/loginschema';
+import { BASE_URL } from '@/utils/url';
 
 export default function Login() {
   const [email, setEmail] = useState<string>('');
@@ -25,7 +26,7 @@ export default function Login() {
     }
 
     try {
-      const response = await axios.post('http://localhost:4000/api/auth/login', {
+      const response = await axios.post(`${BASE_URL}/api/auth/login`, {
         email,
         password,
       });

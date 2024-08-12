@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import FilePenIcon from "./icons/FilePenIcon";
 import axios from 'axios';
+import { BASE_URL } from '@/utils/url';
 
 interface Flashcard {
   id: string;
@@ -39,7 +40,7 @@ export function EditDialog({ flashcard }: EditDialogProps) {
     setLoading(true);
     setError(null);
     try {
-      await axios.put(`http://localhost:4000/api/flashcards/update/${flashcard.id}`, { question, answer },{
+      await axios.put(`${BASE_URL}/api/flashcards/update/${flashcard.id}`, { question, answer },{
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
           }

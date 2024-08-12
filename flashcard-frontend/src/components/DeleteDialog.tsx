@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import TrashIcon from "./icons/TrashIcon";
+import { BASE_URL } from "@/utils/url";
 
 interface DeleteDialogProps {
     id: string;
@@ -27,7 +28,7 @@ export function DeleteDialog({ id }: DeleteDialogProps) {
         setError(null);
 
         try {
-            await axios.delete(`http://localhost:4000/api/flashcards/delete/${id}`,{
+            await axios.delete(`${BASE_URL}/api/flashcards/delete/${id}`,{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                   }
