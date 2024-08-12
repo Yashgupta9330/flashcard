@@ -27,7 +27,7 @@ const FlashcardDisplay: React.FC<FlashcardDisplayProps> = ({ flashcards }) => {
     };
 
     if (flashcards.length === 0) {
-        return <div>No flashcards available.</div>;
+        return <div className='text-[#FCEDEF] font-semibold text-[16px]'>No flashcards available.</div>;
     }
 
     
