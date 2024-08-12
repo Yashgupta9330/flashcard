@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import FlashcardDisplay from '../components/Flashcard';
 import Navbar from '../components/Navbar';
+import { BASE_URL } from "../utils/url";
 
 const Home = () => {
   const [flashcards, setFlashcards] = useState<{ id: number, question: string, answer: string }[]>([]);
