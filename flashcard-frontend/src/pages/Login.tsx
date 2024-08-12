@@ -54,8 +54,7 @@ export default function Login() {
     <div className="flex min-h-screen items-center justify-center text-white bg-[#191919]">
       <Card className="w-full max-w-md border border-black">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">Login</CardTitle>
-          <CardDescription>Enter your email and password to access your account.</CardDescription>
+          <CardTitle className="text-2xl font-bold text-center w-full">Login</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
