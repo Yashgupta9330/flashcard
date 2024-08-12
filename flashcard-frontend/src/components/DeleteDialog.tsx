@@ -45,9 +45,9 @@ export function DeleteDialog({ id }: DeleteDialogProps) {
             <AlertDialogTrigger asChild>
                 <Button
                     variant="outline"
-                    className="bg-[#E11D48] rounded-full flex flex-row gap-x-2 items-center px-2 py-1 md:px-4 md:py-2 sm:mt-4 mt-auto hover:bg-black"
+                    className="bg-[#E11D48] rounded-full flex flex-row gap-x-2 items-center px-4 py-2 sm:mt-4 mt-auto hover:bg-black"
                 >
-                    <span className="mr-2 flex items-center justify-center gap-1 text-[#FCEDEF] group-hover:text-[#FCEDEF] md:text-[16px] text-[12px] group-active:text-red-600">
+                    <span className="mr-2 flex items-center justify-center gap-1 text-[#FCEDEF] group-hover:text-[#FCEDEF] text-[16px] group-active:text-red-600">
                         Delete
                     </span>
                     <TrashIcon className="w-4 h-4" />

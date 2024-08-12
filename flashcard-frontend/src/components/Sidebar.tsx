@@ -6,6 +6,7 @@ import SettingsIcon from "./icons/SettingsIcon";
 
 const Sidebar = () => {
     return(
+        <div className="hidden lg:block">
         <div className="bg-background w-60 border-r border-muted flex flex-col">
         <div className="p-4 border-b border-muted">
           <h2 className="text-xl font-bold">Admin Dashboard</h2>
@@ -38,6 +39,7 @@ const Sidebar = () => {
             </li>
           </ul>
         </nav>
+      </div>
       </div>
     )
 }

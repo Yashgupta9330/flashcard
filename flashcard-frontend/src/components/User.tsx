@@ -1,6 +1,6 @@
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function User() {
 
@@ -20,6 +20,7 @@ export default function User() {
               </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
+             <DropdownMenuItem ><Link to="/admin/dashboard">Dashboard</Link></DropdownMenuItem>
               <DropdownMenuItem onClick={handleLogout}>Logout</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

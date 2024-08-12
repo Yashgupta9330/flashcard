@@ -49,7 +49,7 @@ export default function CardAdmin() {
                     <div className="loader"><Spinner/></div> 
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 gap-2">
                     {flashcards.length>0 && flashcards.map(flashcard => (
                  <Card
                  key={flashcard.id}
@@ -67,7 +67,7 @@ export default function CardAdmin() {
                      <DeleteDialog id={flashcard.id} />
                    </div>
                  </CardContent>
-               </Card>
+                  </Card>
                     ))}
                   </div>
                 )}

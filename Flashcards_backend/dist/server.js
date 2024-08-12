@@ -13,7 +13,7 @@ dotenv_1.default.config(); // Load environment variables
 const app = (0, express_1.default)();
 const port = process.env.PORT || 4000;
 app.use((0, cors_1.default)({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://flashcard-sandy.vercel.app"],
     credentials: true
 }));
 app.use(express_1.default.json());

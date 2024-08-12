@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-
+import Nexticon from './icons/Nexticon';
+import Previousicon from './icons/Previcons';
+import { Card, CardContent } from './ui/card'; 
 interface Flashcard {
+    id: number;
     question: string;
     answer: string;
 }
@@ -36,76 +39,39 @@ const FlashcardDisplay: React.FC<FlashcardDisplayProps> = ({ flashcards }) => {
     const { question, answer } = flashcards[currentIndex];
 
     return (
-        <div className="w-full mt-24 flex flex-col items-center justify-center">
-            <div
-                className={`card w-80 h-60 relative flex items-center justify-center cursor-pointer mb-4 bg-[#ffffff0d] border border-[#3D3D3D] backdrop-blur-lg rounded-[20px] shadow-[0px_0px_2px_0px_#00000040] group hover:border-[#FCEDEF] transition-transform duration-500 ${flipped ? 'flipped' : ''}`}
+        <div className="w-full mt-24 flex flex-col items-center justify-center px-4">
+            <Card
+                className="relative w-full max-w-sm md:max-w-md lg:max-w-lg h-60 flex items-center justify-center cursor-pointer mb-4 bg-[#ffffff0d] border border-[#3D3D3D] backdrop-blur-lg rounded-[20px] p-4 shadow-[0px_0px_2px_0px_#00000040] group hover:border-[#FCEDEF] transition-transform duration-500"
                 onClick={handleFlip}
                 style={{
                     perspective: '1000px',
                 }}
             >
-                <div
-                    className="card-side front absolute w-full h-full flex items-center justify-center p-4 rounded-[20px] bg-white"
-                    style={{
-                        backfaceVisibility: 'hidden',
-                        transform: 'rotateY(0deg)',
-                    }}
+                <CardContent
+                    className={`text-[#F3F3F3EA] w-full h-full flex items-center justify-center rounded-[20px] transition-transform duration-500`}
                 >
-                    <div className="text-xl font-bold text-center text-[20px]">{question}</div>
-                </div>
-                <div
-                    className="card-side back absolute w-full h-full flex items-center justify-center p-4 rounded-[20px] bg-white"
-                    style={{
-                        backfaceVisibility: 'hidden',
-                        transform: 'rotateY(180deg)',
-                    }}
-                >
-                    <div className="text-xl font-bold text-center text-[20px]">{answer}</div>
-                </div>
-            </div>
-            <div className="flex justify-between w-full max-w-xs">
+                    <span className="text-xl font-bold text-center break-words text-[20px] p-4">
+                        {flipped ? answer : question}
+                    </span>
+                </CardContent>
+            </Card>
+            <div className="flex justify-between w-full max-w-xs mt-4">
                 <button
                     onClick={handlePrevious}
-                    className="bg-[#E11D48] rounded-full flex flex-row gap-x-2 items-center px-2 py-1 md:px-4 md:py-2 sm:mt-4 mt-auto transition-transform transform hover:-translate-y-1 active:translate-y-0"
+                    className="bg-[#E11D48] rounded-full flex flex-row gap-x-2 items-center px-4 py-2 sm:py-3 transition-transform transform hover:-translate-y-1 active:translate-y-0"
                 >
-                    <div className="flex items-center justify-center gap-1 text-[#FCEDEF] md:text-[16px] text-[12px]">
-                        <svg
-                            className="rotate-180 stroke-[#FCEDEF]"
-                            width="17"
-                            height="10"
-                            viewBox="0 0 17 10"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M1.5 5H15.5M15.5 5L11.5 9M15.5 5L11.5 1"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            ></path>
-                        </svg>
+                    <div className="flex items-center justify-center gap-1 text-[#FCEDEF] text-[16px]">
+                        <Previousicon />
                         <span>Previous</span>
                     </div>
                 </button>
                 <button
                     onClick={handleNext}
-                    className="bg-[#E11D48] rounded-full flex flex-row gap-x-2 items-center px-2 py-1 md:px-4 md:py-2 sm:mt-4 mt-auto transition-transform transform hover:-translate-y-1 active:translate-y-0"
+                    className="bg-[#E11D48] rounded-full flex flex-row gap-x-2 items-center px-4 py-2 sm:py-3 transition-transform transform hover:-translate-y-1 active:translate-y-0"
                 >
-                    <div className="flex items-center justify-center gap-1 text-[#FCEDEF] md:text-[16px] text-[12px]">
+                    <div className="flex items-center justify-center gap-1 text-[#FCEDEF] text-[16px]">
                         <span>Next</span>
-                        <svg
-                            className="stroke-[#FCEDEF]"
-                            width="17"
-                            height="10"
-                            viewBox="0 0 17 10"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M1.5 5H15.5M15.5 5L11.5 9M15.5 5L11.5 1"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            ></path>
-                        </svg>
+                        <Nexticon />
                     </div>
                 </button>
             </div>

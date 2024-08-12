@@ -112,32 +112,4 @@
 
 
 
-  .card {
-	transform-style: preserve-3d;
-	transition: 150ms;
-	transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
-	background: rgb(17,17,17);
-	background: linear-gradient(331deg, rgba(17,17,17,1) 43%, rgb(27, 21, 21) 100%);
-}
-
-.card:hover {
-	--translate-y: -2px;
-	box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
-}
-
-.card.flip {
-	--rotate-y: 180deg;
-}
-
-.card .front {
-	left: 0;
-}
-
-.card .front,
-.card .back {
-	backface-visibility: hidden;
-}
-
-.card .back {
-	transform: rotateY(180deg);
-}
+  

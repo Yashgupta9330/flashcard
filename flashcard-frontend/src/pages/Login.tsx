@@ -18,7 +18,6 @@ export default function Login() {
     setLoading(true);
     setError('');
     const result = loginSchema.safeParse({ email, password });
-
     if (!result.success) {
       setError(result.error.errors[0].message);
       setLoading(false);
@@ -33,20 +32,19 @@ export default function Login() {
 
       if (response.status === 200) {
         console.log('Login successful:', response.data);
-        localStorage.setItem("token",response.data.token);
-        localStorage.setItem("user",response.data.user.name);
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("user", response.data.user.name);
         navigate('/admin/dashboard'); 
-      } 
-      else {
+      } else {
         setError('Unexpected response status.');
         console.error('Unexpected response status:', response.status);
       }
-    }
-     catch (error: any) {
-      setError(error.response ? error.response.data.message : error.message);
-      console.error('Login failed:', error.response ? error.response.data : error.message);
     } 
-    finally {
+    catch (error: any) {
+      setError(error.response && error.response.data.error);
+      console.log(error.response && error.response.data.error)
+    }
+     finally {
       setLoading(false);
     }
   };
@@ -89,12 +87,12 @@ export default function Login() {
               required
             />
           </div>
-          {error && <p className="text-red-500">{error}</p>}
         </CardContent>
-        <CardFooter>
+        <CardFooter className="flex flex-col space-y-2">
           <Button className="w-full" onClick={handleLogin} disabled={loading}>
             {loading ? 'Signing in...' : 'Sign in'}
           </Button>
+          {error && <p className="text-red-500">{error}</p>}
         </CardFooter>
       </Card>
     </div>
