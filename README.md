@@ -46,8 +46,8 @@ flashcard/
     ├── prisma/
     ├── node_modules/
     ├── package.json
-    └── tsconfig.json
-
+    └── tsconfig.json ```
+ 
 ## 🚀 Getting Started
 
 ### Prerequisites
