@@ -32,6 +32,7 @@ Welcome to the Flashcard Learning Tool! This project is designed to help users s
 -Zod
 -Prisma
 ## 📂 File Structure
+
 ├── frontend/
 │ ├── src/
 │ ├── public/
@@ -44,6 +45,7 @@ Welcome to the Flashcard Learning Tool! This project is designed to help users s
 ├── node_modules/
 ├── package.json
 └── tsconfig.json
+
 ## 🚀 Getting Started
 
 ### Prerequisites
