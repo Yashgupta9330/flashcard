@@ -46,7 +46,8 @@ flashcard/
     ├── prisma/
     ├── node_modules/
     ├── package.json
-    └── tsconfig.json ```
+    └── tsconfig.json
+plaintext```
  
 ## 🚀 Getting Started
 
