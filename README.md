@@ -1,28 +1,37 @@
-Flashcard Learning Tool
+# Flashcard Learning Tool
+
 Welcome to the Flashcard Learning Tool! This project is designed to help users study and learn using flashcards, with a focus on simplicity and efficiency. The tool includes both a frontend and a backend, allowing for a fully functional application with database integration.
 
-🌟 Features
-Flashcards Display: Users can view flashcards one at a time, with the option to flip them to see the answer.
-Navigation: Easily navigate through flashcards using "Next" and "Previous" buttons.
-Admin Dashboard: Add, edit, or delete flashcards through a user-friendly internal dashboard.
-Database Integration: All flashcards are stored in a PostgreSQL database, ensuring data persistence and integrity.
-Reverse Proxy & Caching: Frontend files are served through a reverse proxy on an EC2 instance with Redis caching for improved performance.
-🛠️ Tech Stack
-Frontend
-React.js
-Tailwind CSS
-shadcn
-axios
-Vite
-TypeScript
-Backend
-SQL
-TypeScript
-Node.js
-Express
-Zod
-Prisma
-📂 File Structure
+## 🌟 Features
+
+- **Flashcards Display:** Users can view flashcards one at a time, with the option to flip them to see the answer.
+- **Navigation:** Easily navigate through flashcards using "Next" and "Previous" buttons.
+- **Admin Dashboard:** Add, edit, or delete flashcards through a user-friendly internal dashboard.
+- **Database Integration:** All flashcards are stored in a SQL database, ensuring data persistence and integrity.
+
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Tailwind CSS
+- shadcn
+- axios
+- Vite
+- TypeScript
+
+### Backend
+- SQL
+- TypeScript
+- Node.js
+- Express
+- Zod
+- Prisma
+-Node.js
+-Express
+-Zod
+-Prisma
+## 📂 File Structure
 ├── frontend/
 │   ├── src/
 │   ├── public/
@@ -35,45 +44,72 @@ Prisma
     ├── node_modules/
     ├── package.json
     └── tsconfig.json
-🚀 Getting Started
-Prerequisites
-Node.js
-SQL 
-Installation
-1. Clone the repository
-git clone https://github.com/Yashgupta9330/flashcard.git
-cd flashcard
-2. Set up the Backend
-Navigate to the backend directory and install dependencies:
 
-cd flashcards_backend
-npm install
-Set up the Prisma schema and migrate the database:
+## 🚀 Getting Started
 
-npx prisma migrate dev
-Start the backend server:
+### Prerequisites
+- Node.js
+- SQL 
 
-npm start
-3. Set up the Frontend
-Navigate to the frontend directory and install dependencies:
+### Installation
 
-cd ../flashcard-frontend
-npm install
-Start the frontend development server:
+1. **Clone the repository**
 
-npm run dev
-4. Environment Variables
-Create a .env file in both frontend and backend directories and add necessary environment variables:
+    ```bash
+    git clone https://github.com/Yashgupta9330/flashcard.git
+    cd flashcard
+    ```
 
-Frontend .env:
+2. **Set up the Backend**
 
-VITE_API_URL=http://localhost:5173
-Backend .env:
+    Navigate to the backend directory and install dependencies:
 
-DATABASE_URL=your_sql_database_url
+    ```bash
+    cd backend
+    npm install
+    ```
 
+    Set up the Prisma schema and migrate the database:
 
+    ```bash
+    npx prisma migrate dev
+    ```
 
+    Start the backend server:
 
-📝 License
-This project is licensed under the MIT License.
+    ```bash
+    npm start
+    ```
+
+3. **Set up the Frontend**
+
+    Navigate to the frontend directory and install dependencies:
+
+    ```bash
+    cd ../frontend
+    npm install
+    ```
+
+    Start the frontend development server:
+
+    ```bash
+    npm run dev
+    ```
+
+4. **Environment Variables**
+
+    Create a `.env` file in both frontend and backend directories and add the necessary environment variables:
+
+    **Frontend `.env`:**
+    ```env
+    VITE_API_URL=http://localhost:5173
+    ```
+
+    **Backend `.env`:**
+    ```env
+    DATABASE_URL=your_sql_database_url
+    ```
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
