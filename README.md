@@ -33,18 +33,17 @@ Welcome to the Flashcard Learning Tool! This project is designed to help users s
 -Prisma
 ## 📂 File Structure
 ├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.ts
+│ ├── src/
+│ ├── public/
+│ ├── index.html
+│ ├── package.json
+│ └── vite.config.ts
 └── backend/
-    ├── src/
-    ├── prisma/
-    ├── node_modules/
-    ├── package.json
-    └── tsconfig.json
-
+├── src/
+├── prisma/
+├── node_modules/
+├── package.json
+└── tsconfig.json
 ## 🚀 Getting Started
 
 ### Prerequisites
